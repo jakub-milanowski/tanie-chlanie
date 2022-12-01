@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    command: >
+      bash -c "python manage.py migrate
+      && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    container_name: backend
+    env_file:
+        - ./backend/.env
+
+  frontend:
+        image: "node:alpine"
+        build: ./frontend
+        command: npm run start
+        restart: always
+        container_name: frontend
+        ports:
+          - "3000:3000"
+        volumes:
+         - './frontend:/code'

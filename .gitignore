@@ -1,0 +1,7 @@
+frontend/node_modules
+*.DS_Store
+backend/.env
+.idea
+/build
+backend/db.sqlite3
+*/migrations
