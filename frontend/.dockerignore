@@ -1,0 +1,11 @@
+.git
+.gitattributes
+.gitignore
+.next
+.prettierignore
+build
+dist
+docs
+node_modules
+npm-debug.log
+public/build

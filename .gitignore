@@ -2,6 +2,9 @@ frontend/node_modules
 *.DS_Store
 backend/.env
 .idea
-/build
+frontend/build
 backend/db.sqlite3
 */migrations
+frontend/.cache
+frontend/public/build
+frontend/.env

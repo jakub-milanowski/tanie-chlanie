@@ -10,15 +10,14 @@ services:
       - "8000:8000"
     container_name: backend
     env_file:
-        - ./backend/.env
+      - ./backend/.env
 
   frontend:
-        image: "node:alpine"
-        build: ./frontend
-        command: npm run start
-        restart: always
-        container_name: frontend
-        ports:
-          - "3000:3000"
-        volumes:
-         - './frontend:/code'
+    image: "node:alpine"
+    build: ./frontend
+    restart: always
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./frontend:/code"
