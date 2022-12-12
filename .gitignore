@@ -1,10 +1,9 @@
 frontend/node_modules
 *.DS_Store
-backend/.env
+*.env
 .idea
-frontend/build
-backend/db.sqlite3
+*db.sqlite3*
 */migrations
 frontend/.cache
 frontend/public/build
-frontend/.env
+frontend/package-lock.json
