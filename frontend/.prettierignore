@@ -1,0 +1,8 @@
+.next
+dist
+build
+out
+node_modules
+.yarn
+.git
+.cache
