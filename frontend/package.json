@@ -3,12 +3,11 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "npm install && remix dev",
+    "dev": "remix dev",
     "start": "remix-serve build",
     "lint": "eslint --ext .ts,.tsx .",
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
-    "prepare": "cd .. && husky install frontend/.husky",
-    "postinstall": "remix setup node"
+    "prepare": "cd .. && husky install frontend/.husky"
   },
   "dependencies": {
     "@remix-run/node": "^1.8.0",
