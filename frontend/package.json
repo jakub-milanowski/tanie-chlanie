@@ -13,9 +13,11 @@
     "@remix-run/node": "^1.8.0",
     "@remix-run/react": "^1.8.0",
     "@remix-run/serve": "^1.8.0",
+    "axios": "^1.2.2",
     "isbot": "^3.6.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.2"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.8.0",
