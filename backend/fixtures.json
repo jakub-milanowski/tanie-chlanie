@@ -1,0 +1,207 @@
+[
+    {
+        "model": "venues.location",
+        "pk": 1,
+        "fields": {
+            "city": "Warszawa",
+            "street": "Nowomiejska",
+            "building": 3,
+            "venue": 5
+        }
+    },
+    {
+        "model": "venues.location",
+        "pk": 2,
+        "fields": {
+            "city": "Poznan",
+            "street": "Nowopijna",
+            "building": 14,
+            "venue": 6
+        }
+    },
+    {
+        "model": "venues.location",
+        "pk": 3,
+        "fields": {
+            "city": "Krakow",
+            "street": "Maczetowa",
+            "building": 8,
+            "venue": 2
+        }
+    },
+    {
+        "model": "venues.venue",
+        "pk": 1,
+        "fields": {
+            "name": "Drinking paradise",
+            "description": "This is a nice place to hang out with your mom",
+            "location": 1,
+            "verified": true,
+            "cover_photo": "https://cityparkhotel.pl/wp-content/uploads/2020/08/top.jpg",
+            "modified": "2021-02-03"
+        }
+    },
+    {
+        "model": "venues.venue",
+        "pk": 2,
+        "fields": {
+            "name": "Bar Kleopatra",
+            "description": "We have many beverages for every taste out there",
+            "location": 2,
+            "verified": true,
+            "cover_photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsteambar.pl%2Fen%2Fmenu%2F&psig=AOvVaw2mFC4-DO-OP7-z6NEh0Lrr&ust=1674059161473000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMjohL-Cz_wCFQAAAAAdAAAAABAE",
+            "modified": "2021-02-03"
+        }
+    },
+    {
+        "model": "venues.venue",
+        "pk": 3,
+        "fields": {
+            "name": "Chlewnia menelnia",
+            "description": "It's a safe space for all alcoholics",
+            "location": 3,
+            "verified": true,
+            "cover_photo": "https://www.national-geographic.pl/media/cache/slider_big/uploads/media/default/0014/25/mowi-sie-ze-american-bar-w-savoy-hotel-na-zdjeciu-jest-jednym-z-najwazniejszych-historycznych-barow-otwartych-do-dzis-fot-www-worlds50bestbars-com.jpeg",
+            "modified": "2021-02-03"
+        }
+    },
+    {
+        "model": "venues.review",
+        "pk": 1,
+        "fields": {
+            "author": "John Doe",
+            "content": "It stinks",
+            "rating": 1,
+            "venue": 1
+        }
+    },
+    {
+        "model": "venues.review",
+        "pk": 2,
+        "fields": {
+            "author": "Jane Doe",
+            "content": "Classy and clean!",
+            "rating": 5,
+            "venue": 3
+        }
+    },
+    {
+        "model": "venues.review",
+        "pk": 3,
+        "fields": {
+            "author": "Jan Nowak",
+            "content": "It's expensive but ok",
+            "rating": 3,
+            "venue": 2
+        }
+    },
+    {
+        "model": "venues.review",
+        "pk": 4,
+        "fields": {
+            "author": "Joanna Nowak",
+            "content": "It's cheap and fun",
+            "rating": 5,
+            "venue": 2
+        }
+    },
+    {
+        "model": "liquors.category",
+        "pk": 1,
+        "fields": {
+            "name": "Beers"
+        }
+    },
+    {
+        "model": "liquors.category",
+        "pk": 2,
+        "fields": {
+            "name": "Whisky"
+        }
+    },
+    {
+        "model": "liquors.category",
+        "pk": 3,
+        "fields": {
+            "name": "Shots"
+        }
+    },
+    {
+        "model": "liquors.liquor",
+        "pk": 1,
+        "fields": {
+            "name": "Lech",
+            "price": 13.99,
+            "volume": 500,
+            "amount": 1,
+            "thumbnail": "https://odeo24.pl/pol_pl_Piwo-lech-premium-0-5l-butelka-zwrotna-42652_1.jpg",
+            "category": 1,
+            "venue": 1
+        }
+    },
+    {
+        "model": "liquors.liquor",
+        "pk": 2,
+        "fields": {
+            "name": "Kamikaze",
+            "price": 25.50,
+            "volume": 50,
+            "amount": 6,
+            "thumbnail": "https://staticsmaker.iplsc.com/smaker_prod_2017_05_25/9803aac898ed9d9b97800a43a6dc66c5-content.jpg",
+            "category": 3,
+            "venue": 1
+        }
+    },
+    {
+        "model": "liquors.liquor",
+        "pk": 3,
+        "fields": {
+            "name": "Old fashioned",
+            "price": 35.50,
+            "volume": 250,
+            "amount": 1,
+            "thumbnail": "https://www.liquor.com/thmb/wm9ICT4sskWaeUONYmoCqiTEjLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
+            "category": 2,
+            "venue": 1
+        }
+    },
+    {
+        "model": "liquors.liquor",
+        "pk": 4,
+        "fields": {
+            "name": "Old fashioned",
+            "price": 35.50,
+            "volume": 250,
+            "amount": 1,
+            "thumbnail": "https://www.liquor.com/thmb/wm9ICT4sskWaeUONYmoCqiTEjLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
+            "category": 2,
+            "venue": 2
+        }
+    },
+    {
+        "model": "liquors.liquor",
+        "pk": 5,
+        "fields": {
+            "name": "Old fashioned",
+            "price": 35.50,
+            "volume": 250,
+            "amount": 1,
+            "thumbnail": "https://www.liquor.com/thmb/wm9ICT4sskWaeUONYmoCqiTEjLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__08113350__bourbon-old-fashioned-720x720-recipe-ade6f7780c304999be3577e565c9bcdd.jpg",
+            "category": 2,
+            "venue": 3
+        }
+    },
+    {
+        "model": "liquors.liquor",
+        "pk": 6,
+        "fields": {
+            "name": "Lech",
+            "price": 13.99,
+            "volume": 500,
+            "amount": 1,
+            "thumbnail": "https://odeo24.pl/pol_pl_Piwo-lech-premium-0-5l-butelka-zwrotna-42652_1.jpg",
+            "category": 1,
+            "venue": 3
+        }
+    }
+]

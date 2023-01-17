@@ -13,4 +13,4 @@ class LiquorListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Liquor
-        fields = ["name", "price", "category"]
+        fields = ["name", "price", "category", "thumbnail"]
