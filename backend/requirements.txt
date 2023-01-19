@@ -2,3 +2,4 @@ Django
 python-dotenv
 djangorestframework
 django_extensions
+drf-yasg

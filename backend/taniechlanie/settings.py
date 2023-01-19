@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "venues",
     "liquors",
-    "django_extensions"
+    "django_extensions",
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [
