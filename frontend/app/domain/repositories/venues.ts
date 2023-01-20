@@ -1,6 +1,6 @@
 import { UseQueryResult } from "react-query";
 import { AxiosError } from "axios";
 
-export interface ICities {
+export interface IVenues {
   find: () => UseQueryResult<any, AxiosError>;
 }

@@ -1,5 +1,5 @@
-import { CitiesService } from "~/domain/use-cases/cities";
+import { VenuesService } from "~/domain/use-cases/venues";
 
-const citiesApis = new CitiesService();
+const VenuesApi = new VenuesService();
 
-export { citiesApis };
+export { VenuesApi };

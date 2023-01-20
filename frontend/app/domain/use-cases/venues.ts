@@ -1,10 +1,10 @@
-import { ICities } from "~/domain/repositories";
 import { useQuery, UseQueryResult } from "react-query";
 import { callApi } from "~/domain/use-cases/api";
 import { AxiosMethodEnum } from "~/domain/models";
 import { AxiosError, AxiosResponse } from "axios";
+import { IVenues } from "~/domain/repositories/venues";
 
-export class CitiesService implements ICities {
+export class VenuesService implements IVenues {
   find(): UseQueryResult<any, AxiosError> {
     //return Promise.resolve(undefined);
     return useQuery(["cities"], () => this.#fetchFind());
