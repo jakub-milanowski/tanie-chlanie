@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 interface RootModuleProps {
   pageData: any;
 }
@@ -5,7 +7,12 @@ interface RootModuleProps {
 const RootModule = (props: RootModuleProps): JSX.Element => {
   const {} = props;
 
-  return <div>Root module - select cit wrey</div>;
+  return (
+    <div>
+      <div>Root module - select cit wrey</div>
+      <Link to="venues">lokale</Link>
+    </div>
+  );
 };
 
 export default RootModule;

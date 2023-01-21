@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosApi = axios.create({
-  baseURL: "/axios"
+  baseURL: "http://0.0.0.0:8000"
 });
 
 axiosApi.interceptors.response.use(
@@ -9,6 +9,7 @@ axiosApi.interceptors.response.use(
     return response;
   },
   function (error) {
+    console.log(error);
     return Promise.reject(error);
   }
 );

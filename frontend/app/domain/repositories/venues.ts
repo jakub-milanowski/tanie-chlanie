@@ -1,6 +1,5 @@
-import { UseQueryResult } from "react-query";
-import { AxiosError } from "axios";
+import { AxiosResponse } from "axios";
 
 export interface IVenues {
-  find: () => UseQueryResult<any, AxiosError>;
+  findAll: () => Promise<AxiosResponse<any>>;
 }
