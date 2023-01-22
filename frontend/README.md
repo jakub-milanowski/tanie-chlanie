@@ -38,18 +38,22 @@ Make sure to deploy the output of `remix build`
 - `build/`
 - `public/build/`
 
-
 ## Architektura
 
-W projekcie będzie bazował na  <a link="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html" > "clean architecture" </a>
-- <a link="https://reactjsexample.com/clean-architecture-for-react/" > clean architecture for react </a>
-- <a link="https://paulallies.medium.com/clean-architecture-typescript-and-react-8e509098abfe" > clean architecture typescript </a>
+W projekcie będzie bazował na
+<a link="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html" > "clean
+architecture" </a>
+
+- <a link="https://reactjsexample.com/clean-architecture-for-react/" > clean architecture for react
+  </a>
+- <a link="https://paulallies.medium.com/clean-architecture-typescript-and-react-8e509098abfe" >
+  clean architecture typescript </a>
 - <a link="https://github.dev/nanosoftonline/clean-typescript-react" > github example </a>
 
-
-W początkowej fazie nie będziemy stosować wszystkich założeń oraz część może zmienić się w ramach potrzeb projektu. 
-Stosujemy ogólny koncept "clean architecture", możemy dowoli modyfikować architekturę jeżeli wybory dokonane będą dobrze opisane i 
-wykażą się mało problematyczne do wykonania / utrzymania
+W początkowej fazie nie będziemy stosować wszystkich założeń oraz część może zmienić się w ramach
+potrzeb projektu. Stosujemy ogólny koncept "clean architecture", możemy dowoli modyfikować
+architekturę jeżeli wybory dokonane będą dobrze opisane i wykażą się mało problematyczne do
+wykonania / utrzymania
 
 następujące założenia w "clean architecture"
 
@@ -57,18 +61,17 @@ struktura folderów
 
 ```bash
 |-- app
-    |-- routers 
+    |-- routers
         |-- page
     |-- components
         |-- atoms
         |-- molecules
         |-- organisms
+    |-- common
     |-- styles
         |-- global.scss
     |-- modules
         |-- module
-            |-- models
-                |-- enums
             |-- hooks
             |-- validation
             |-- mappers
@@ -78,6 +81,8 @@ struktura folderów
         |-- repositories
         |-- mappers
         |-- models
+            |-- dao
+            |-- dto
             |-- enums
         |-- api
 
@@ -86,11 +91,16 @@ struktura folderów
 ### Opis folderów
 
 #### Routers
+
 Plik w którym znajdą się strony, możliwe do otwarcia przez url w aplikacji
 
 #### Components
-Zawarte będą tam komponenty, którę będą tworzył naszm design system. Przechowujemy tam uniwersalne komponenty rozbite według konceptu 
-<a link="https://atomicdesign.bradfrost.com/chapter-2/" > atomic design </a> np: Button, Header, Box, Input itp. Nie przechowujemy tam biznesowych komponentów które są przeznaczone do danego modułu.
+
+Zawarte będą tam komponenty, którę będą tworzył naszm design system. Przechowujemy tam uniwersalne
+komponenty rozbite według konceptu <a link="https://atomicdesign.bradfrost.com/chapter-2/" > atomic
+design </a> np: Button, Header, Box, Input itp. Nie przechowujemy tam biznesowych komponentów które
+są przeznaczone do danego modułu.
+
 <table>
     <thead>
         <th style="width: 100px" >katalog</th>
@@ -113,7 +123,11 @@ Zawarte będą tam komponenty, którę będą tworzył naszm design system. Prze
 </table>
 
 #### Modules
-Przechowujemy tam moduły aplikacji. W naszej aplikacji będziemy mieli kilka modułów np: Moduł odpowiedzialny za wyświetalanie miast i funkcję związane w tym obrębie, Moduł odpowiedzialny za wyswietlanie barów i funkcję związane w tym obrębie.
+
+Przechowujemy tam moduły aplikacji. W naszej aplikacji będziemy mieli kilka modułów np: Moduł
+odpowiedzialny za wyświetalanie miast i funkcję związane w tym obrębie, Moduł odpowiedzialny za
+wyswietlanie barów i funkcję związane w tym obrębie.
+
 <table>
     <thead>
         <th style="width: 100px" >katalog</th>
@@ -144,7 +158,9 @@ Przechowujemy tam moduły aplikacji. W naszej aplikacji będziemy mieli kilka mo
 </table>
 
 #### Domain
+
 Jest to mózg aplikacji. Wykonywane są tutaj wszystkie pozwiązania z Backendem
+
 <table>
     <thead>
         <th style="width: 100px" >katalog</th>
@@ -173,5 +189,3 @@ Jest to mózg aplikacji. Wykonywane są tutaj wszystkie pozwiązania z Backendem
         </tr>
     </tbody>
 </table>
-
-

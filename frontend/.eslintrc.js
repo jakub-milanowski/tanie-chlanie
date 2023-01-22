@@ -8,23 +8,19 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:jest/recommended",
     "plugin:react/recommended",
     "eslint:recommended"
   ],
-  plugins: ["@typescript-eslint", "import", "simple-import-sort"],
+  plugins: ["react", "@typescript-eslint", "import", "simple-import-sort"],
   globals: {
     JSX: "readonly"
   },
   parserOptions: {
-    ecmaVersion: 12,
-    ecmaFeatures: {
-      jsx: true
-    },
     sourceType: "module",
-    project: ["./tsconfig.json"]
+    project: ["tsconfig.json"]
   },
   env: {
+    es6: true,
     browser: true,
     node: true
   },
@@ -38,6 +34,7 @@ module.exports = {
     "@typescript-eslint/no-unsafe-call": "warn",
     "@typescript-eslint/no-unsafe-return": "warn",
     "@typescript-eslint/no-implicit-any-catch": "warn",
+    "@typescript-eslint/no-throw-literal": "off",
     "@typescript-eslint/quotes": [
       "error",
       "double",
@@ -47,13 +44,14 @@ module.exports = {
     ],
     "@typescript-eslint/no-unnecessary-type-assertion": "warn",
     "@typescript-eslint/explicit-function-return-type": [
-      "error",
+      "warn",
       {
         allowExpressions: true
       }
     ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [
       "warn",
       {

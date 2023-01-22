@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosApi = axios.create({
-  baseURL: "http://0.0.0.0:8000"
+  baseURL: "http://backend:8000",
+  responseType: "json"
 });
 
 axiosApi.interceptors.response.use(
@@ -9,7 +10,6 @@ axiosApi.interceptors.response.use(
     return response;
   },
   function (error) {
-    console.log(error);
     return Promise.reject(error);
   }
 );
