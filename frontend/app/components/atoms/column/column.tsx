@@ -1,5 +1,4 @@
-import type { BoxProps } from "~/components/atoms/box/box";
-
+import type { BoxProps } from "../box/box";
 import { SColumn } from "./column.style";
 
 export interface ColumnProps extends Omit<BoxProps, "direction"> {

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { SBox } from "~/components/atoms/box/box.style";
-
+import { SBox } from "../box/box.style";
 import type { RowProps } from "./row";
 
 export const SRow = styled(SBox)<RowProps>`

@@ -9,7 +9,8 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:react/recommended",
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:storybook/recommended"
   ],
   plugins: ["react", "@typescript-eslint", "import", "simple-import-sort"],
   globals: {
@@ -29,7 +30,12 @@ module.exports = {
     "@typescript-eslint/comma-dangle": ["error", "never"],
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-shadow": "error",
-    "@typescript-eslint/no-unused-vars": ["error", { ignoreRestSiblings: true }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        ignoreRestSiblings: true
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-unsafe-call": "warn",
     "@typescript-eslint/no-unsafe-return": "warn",

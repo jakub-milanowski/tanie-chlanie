@@ -1,10 +1,9 @@
 import { Link } from "@remix-run/react";
 
-import Card from "~/components/atoms/card/card";
-import Column from "~/components/atoms/column/column";
-import Row from "~/components/atoms/row/row";
-import type { TVenue } from "~/domain/models/dao/venues.type";
-
+import Card from "../../../../../components/atoms/card/card";
+import Column from "../../../../../components/atoms/column/column";
+import Row from "../../../../../components/atoms/row/row";
+import type { TVenue } from "../../../../../domain/models/dao/venues.type";
 import VenueImage from "./venue-image/venue-image";
 
 interface VenueProps {

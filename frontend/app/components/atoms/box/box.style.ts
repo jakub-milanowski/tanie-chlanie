@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import type { BoxProps } from "~/components/atoms/box/box";
+import type { BoxProps } from "./box";
 
 export const SBox = styled.div<BoxProps>`
   position: relative;

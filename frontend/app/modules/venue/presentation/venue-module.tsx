@@ -1,4 +1,4 @@
-import type { TVenueDetail } from "~/domain/models/dao/venue-detail.type";
+import type { TVenueDetail } from "../../../domain/models/dao/venue-detail.type";
 
 interface VenueModuleProps {
   venueDetail: TVenueDetail;

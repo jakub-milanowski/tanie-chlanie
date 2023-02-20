@@ -1,4 +1,4 @@
-import { VenuesService } from "~/domain/use-cases/venues";
+import { VenuesService } from "./venues";
 
 const VenuesApi = new VenuesService();
 

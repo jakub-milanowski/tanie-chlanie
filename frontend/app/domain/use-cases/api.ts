@@ -1,6 +1,6 @@
 import type { AxiosRequestConfig, AxiosResponse } from "axios";
 
-import { axiosApi } from "~/domain/api/axios";
+import { axiosApi } from "../api/axios";
 
 export const callApi = async <T>(
   config: AxiosRequestConfig<unknown>

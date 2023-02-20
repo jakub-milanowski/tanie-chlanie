@@ -1,7 +1,7 @@
-import Row from "~/components/atoms/row/row";
-import type { TVenue } from "~/domain/models/dao/venues.type";
-import VenueFilter from "~/modules/venues/presentation/venue-filter/venue-filter";
-import VenueList from "~/modules/venues/presentation/venue-list/venue-list";
+import Row from "../../../components/atoms/row/row";
+import type { TVenue } from "../../../domain/models/dao/venues.type";
+import VenueFilter from "./venue-filter/venue-filter";
+import VenueList from "./venue-list/venue-list";
 
 interface VenuesModuleProps {
   venues: TVenue[];

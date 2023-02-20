@@ -1,6 +1,6 @@
-import type { TLiquor } from "~/domain/models/dao/liquor.type";
-import type { TLocationDetail } from "~/domain/models/dao/location-detail.type";
-import type { TReview } from "~/domain/models/dao/review.type";
+import type { TLiquor } from "./liquor.type";
+import type { TLocationDetail } from "./location-detail.type";
+import type { TReview } from "./review.type";
 
 export type TVenueDetail = {
   name: string;

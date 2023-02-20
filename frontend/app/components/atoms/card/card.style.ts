@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { SBox } from "~/components/atoms/box/box.style";
+import { SBox } from "../box/box.style";
 
 export const StyledCard = styled(SBox)`
   width: 100%;
