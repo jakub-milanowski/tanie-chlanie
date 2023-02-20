@@ -8,3 +8,4 @@ frontend/.cache
 frontend/public/build
 frontend/package-lock.json
 backend/*/migrations
+.vscode

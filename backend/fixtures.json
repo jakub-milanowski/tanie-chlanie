@@ -72,7 +72,8 @@
             "author": "John Doe",
             "content": "It stinks",
             "rating": 1,
-            "venue": 1
+            "venue": 1,
+            "published": "2021-02-03"
         }
     },
     {
@@ -82,7 +83,8 @@
             "author": "Jane Doe",
             "content": "Classy and clean!",
             "rating": 5,
-            "venue": 3
+            "venue": 3,
+            "published": "2021-02-03"
         }
     },
     {
@@ -92,7 +94,8 @@
             "author": "Jan Nowak",
             "content": "It's expensive but ok",
             "rating": 3,
-            "venue": 2
+            "venue": 2,
+            "published": "2021-02-03"
         }
     },
     {
@@ -102,7 +105,8 @@
             "author": "Joanna Nowak",
             "content": "It's cheap and fun",
             "rating": 5,
-            "venue": 2
+            "venue": 2,
+            "published": "2021-02-03"
         }
     },
     {
