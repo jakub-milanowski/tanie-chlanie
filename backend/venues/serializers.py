@@ -8,19 +8,19 @@ from liquors.serializers import LiquorListSerializer
 class VenueListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Venue
-        fields = ["name", "cover_photo"]
+        fields = ["name", "cover_photo", "id"]
 
 
 class ReviewListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ["author", "content", "rating"]
+        fields = ["author", "content", "rating", "published"]
 
 
 class LocationDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
-        fields = ["street", "building", "venue"]
+        fields = ["city", "street", "building", "venue"]
 
 
 class VenueDetailSerializer(serializers.ModelSerializer):

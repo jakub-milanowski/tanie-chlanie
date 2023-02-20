@@ -5,7 +5,7 @@ class Location(models.Model):
     city = models.CharField(max_length=50)
     street = models.CharField(max_length=50)
     building = models.IntegerField()
-    venue = models.IntegerField()
+    venue = models.IntegerField(null=True, blank=True)
 
 
 class Venue(models.Model):
@@ -30,3 +30,4 @@ class Review(models.Model):
     venue = models.ForeignKey(
         Venue, null=False, blank=False, on_delete=models.CASCADE, related_name="reviews"
     )
+    published = models.DateTimeField(auto_now_add=True)
