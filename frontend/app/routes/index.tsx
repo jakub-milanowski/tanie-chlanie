@@ -1,13 +1,16 @@
+import type { TypedResponse } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { LoaderFunction } from "@remix-run/server-runtime/dist/routeModules";
-import { useLoaderData } from "@remix-run/react";
+import type { LoaderFunction } from "@remix-run/server-runtime/dist/routeModules";
+
 import { RootModule } from "~/modules/root";
 
-export const loader: LoaderFunction = async () => {
-  return json<any>({});
+export const loader: LoaderFunction = (): TypedResponse<unknown> => {
+  // Załadować Miasta
+  return json<unknown>({});
 };
 
-export default function Root() {
-  const pageData = useLoaderData<typeof loader>();
-  return <RootModule pageData={pageData} />;
-}
+const Root = (): JSX.Element => {
+  return <RootModule />;
+};
+
+export default Root;

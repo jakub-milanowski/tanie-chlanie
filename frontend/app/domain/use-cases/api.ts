@@ -1,8 +1,9 @@
-import { AxiosRequestConfig, AxiosResponse } from "axios";
-import { axiosApi } from "~/domain/api";
+import type { AxiosRequestConfig, AxiosResponse } from "axios";
+
+import { axiosApi } from "~/domain/api/axios";
 
 export const callApi = async <T>(
   config: AxiosRequestConfig<unknown>
 ): Promise<AxiosResponse<T>> => {
-  return await axiosApi.request<T>(config);
+  return axiosApi.request<T, AxiosResponse<T>>(config);
 };
