@@ -26,7 +26,7 @@ class LocationDetailSerializer(serializers.ModelSerializer):
 class VenueDetailSerializer(serializers.ModelSerializer):
     location = LocationDetailSerializer(read_only=True)
     reviews = ReviewListSerializer(read_only=True, many=True)
-    liquors = LiquorListSerializer(read_only=True, many=True)
+    categories = serializers.SerializerMethodField()
 
     class Meta:
         model = Venue
@@ -36,5 +36,9 @@ class VenueDetailSerializer(serializers.ModelSerializer):
             "cover_photo",
             "location",
             "reviews",
-            "liquors",
+            "categories",
         ]
+
+    def get_categories(self, obj):
+        liquors = obj.get_liquors_by_category()
+        return liquors

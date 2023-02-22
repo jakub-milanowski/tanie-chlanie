@@ -22,6 +22,16 @@ class Venue(models.Model):
     verified = models.BooleanField()
     cover_photo = models.URLField()
 
+    def get_liquors_by_category(self):
+        liquors = self.liquors.all().select_related("category")
+        liquors_by_category = {liquor.category.name: [] for liquor in liquors}
+        for liquor in liquors:
+            liquors_by_category[liquor.category.name].append(liquor.name)
+        return [
+            {"name": category_name, "liquors": liquors}
+            for category_name, liquors in liquors_by_category.items()
+        ]
+
 
 class Review(models.Model):
     author = models.CharField(max_length=200)
