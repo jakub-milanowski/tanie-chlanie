@@ -2,15 +2,22 @@ from rest_framework import serializers
 from .models import Liquor, Category
 
 
-class CategoryDetailSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = ["name"]
-
-
 class LiquorListSerializer(serializers.ModelSerializer):
-    category = CategoryDetailSerializer(read_only=True)
 
     class Meta:
         model = Liquor
-        fields = ["name", "price", "category", "thumbnail"]
+        fields = ["name", "price", "thumbnail"]
+
+
+class CategoryDetailSerializer(serializers.ModelSerializer):
+    liquors = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Category
+        fields = ["name", "liquors"]
+
+    def get_liquors(self, category):
+        liquors = self.context.get("venue").liquors.filter(category=category)
+        print(liquors)
+        serializer = LiquorListSerializer(liquors, context=self.context, many = True)
+        return serializer.data

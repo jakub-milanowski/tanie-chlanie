@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import Venue, Location, Review
 
-from liquors.serializers import LiquorListSerializer
+from liquors.serializers import CategoryDetailSerializer
 
 
 class VenueListSerializer(serializers.ModelSerializer):
@@ -39,6 +39,7 @@ class VenueDetailSerializer(serializers.ModelSerializer):
             "categories",
         ]
 
-    def get_categories(self, obj):
-        liquors = obj.get_liquors_by_category()
-        return liquors
+    def get_categories(self, venue):
+        categories = [liquor.category for liquor in venue.liquors.all()]
+        serializer = CategoryDetailSerializer(set(categories), context={'venue': venue}, many = True)
+        return serializer.data
