@@ -13,7 +13,7 @@ const VenuesModule = (props: VenuesModuleProps): JSX.Element => {
   return (
     <div>
       <div>
-        <h1>Lokale</h1>
+        <h1>Locale</h1>
       </div>
       <Row fullwidth gap={30}>
         <VenueFilter />
