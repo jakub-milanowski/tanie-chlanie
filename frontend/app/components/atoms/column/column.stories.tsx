@@ -6,7 +6,7 @@ import Box from "../box/box";
 import Column from "./column";
 
 export default {
-  title: "Box",
+  title: "Atoms/Box",
   component: Column
 } as ComponentMeta<typeof Column>;
 
@@ -24,6 +24,7 @@ const ColumnTemplate: ComponentStory<typeof Column> = (args) => (
 );
 
 export const ColumnDefault = ColumnTemplate.bind({});
+ColumnDefault.storyName = "Column";
 ColumnDefault.args = {
   fullwidth: true,
   gap: 40

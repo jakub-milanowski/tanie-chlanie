@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { SBox } from "../box/box.style";
+import Box from "../box/box";
 
-export const StyledCard = styled(SBox)`
+export const StyledCard = styled(Box)`
   width: 100%;
   border-radius: 10px;
   margin: 1em 0;

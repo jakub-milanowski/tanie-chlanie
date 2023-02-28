@@ -1,9 +1,8 @@
 import styled from "styled-components";
-
-import { SBox } from "../box/box.style";
 import type { ColumnProps } from "./column";
+import Box from "../box/box";
 
-export const SColumn = styled(SBox)<ColumnProps>`
+export const SColumn = styled(Box)<ColumnProps>`
   display: flex;
   flex-direction: column;
   gap: ${(props) => (props.gap ? `${props.gap}px` : "0px")};

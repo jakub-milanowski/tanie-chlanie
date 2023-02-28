@@ -5,7 +5,7 @@ import Box from "../box/box";
 import styled from "styled-components";
 
 export default {
-  title: "Card",
+  title: "Atoms/Card",
   component: Card
 } as ComponentMeta<typeof Card>;
 
@@ -17,6 +17,7 @@ const BoxStyled = styled(Box)`
 `;
 
 export const CardDefault = CardTemplate.bind({});
+CardDefault.storyName = "Card";
 CardDefault.args = {
   children: <BoxStyled>Losowy kontent</BoxStyled>
 };

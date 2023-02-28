@@ -6,7 +6,7 @@ import Box from "../box/box";
 import Row from "./row";
 
 export default {
-  title: "Box",
+  title: "Atoms/Box",
   component: Row
 } as ComponentMeta<typeof Row>;
 
@@ -24,6 +24,7 @@ const RowTemplate: ComponentStory<typeof Row> = (args) => (
 );
 
 export const RowDefault = RowTemplate.bind({});
+RowDefault.storyName = "Row";
 RowDefault.args = {
   fullwidth: true,
   gap: 30

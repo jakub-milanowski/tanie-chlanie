@@ -1,9 +1,8 @@
 import styled from "styled-components";
-
-import { SBox } from "../box/box.style";
 import type { RowProps } from "./row";
+import Box from "../box/box";
 
-export const SRow = styled(SBox)<RowProps>`
+export const SRow = styled(Box)<RowProps>`
   display: flex;
   flex-direction: row;
   gap: ${(props) => (props.gap ? `${props.gap}px` : "0px")};
