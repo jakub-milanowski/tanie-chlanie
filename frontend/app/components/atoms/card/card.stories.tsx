@@ -1,8 +1,9 @@
+import styled from "styled-components";
+
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Card from "./card";
 import Box from "../box/box";
-import styled from "styled-components";
+import Card from "./card";
 
 export default {
   title: "Atoms/Card",

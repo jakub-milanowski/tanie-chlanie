@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import type { ColumnProps } from "./column";
+
 import Box from "../box/box";
+import type { ColumnProps } from "./column";
 
 export const SColumn = styled(Box)<ColumnProps>`
   display: flex;

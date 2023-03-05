@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import type { RowProps } from "./row";
+
 import Box from "../box/box";
+import type { RowProps } from "./row";
 
 export const SRow = styled(Box)<RowProps>`
   display: flex;

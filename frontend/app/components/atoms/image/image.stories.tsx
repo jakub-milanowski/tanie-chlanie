@@ -1,6 +1,8 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Image from "./image";
 import styled from "styled-components";
+
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
+
+import Image from "./image";
 
 export default {
   title: "Atoms/Image",
