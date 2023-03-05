@@ -165,7 +165,9 @@ Jest to mózg aplikacji. Wykonywane są tutaj wszystkie pozwiązania z Backendem
 
 - Pliki z widokiem XXXX.tsx
 - Pliki zawierające typ XXXX.type.ts
+  - Typy nazywamy TXXXX np TVenue
 - Pliki z stylizacją XXXX.style.ts
+  - Style nazywamy SXXX np SBox
 - Pliki storybook XXXX.stories.tsx
 - Pliki z custom Hook XXXX.hook.ts
 - Pliki z mapperami XXXX.mapper.ts
@@ -176,3 +178,17 @@ Jest to mózg aplikacji. Wykonywane są tutaj wszystkie pozwiązania z Backendem
 ---
 
 ## Budowanie modułów, jak tworzyć hierarchie plików dla danego widoku
+
+Budowanie hierarchii plików w danym module np widok listy lokali, jest proste. Każdy komponent użyty
+w danym komponencie będzie stanowił kolejny katalog w danym katalogu. Jeżeli zauważymy powtarzalność
+jakichś części widoku, to możemy przenieść taki komponent do katalogu Commons i wtedy używany nie
+zależnie od hierarchii. W każdym katalogu może znaleźć się plik z komponentem, stylami, wyodrębniona
+logiką oraz katalogu z sub-komponentami
+
+```
+--- venue.tsx
+--- venue.style.ts
+--- | venue-header
+    | --- venue-header.ts
+    | --- venue-header.style.ts
+```
