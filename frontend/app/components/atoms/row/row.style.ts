@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-import { SBox } from "~/components/atoms/box/box.style";
-
+import Box from "../box/box";
 import type { RowProps } from "./row";
 
-export const SRow = styled(SBox)<RowProps>`
+export const SRow = styled(Box)<RowProps>`
   display: flex;
   flex-direction: row;
   gap: ${(props) => (props.gap ? `${props.gap}px` : "0px")};

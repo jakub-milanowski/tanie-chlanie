@@ -1,10 +1,9 @@
 import React from "react";
 
-import type { BoxProps } from "~/components/atoms/box/box";
-
+import type { BoxProps } from "../box/box";
 import { StyledCard } from "./card.style";
 
-interface CardProps extends React.ComponentPropsWithoutRef<"div">, BoxProps {}
+export interface CardProps extends React.ComponentPropsWithoutRef<"div">, BoxProps {}
 
 const Card = (props: CardProps): JSX.Element => {
   const { children, ...rest } = props;

@@ -29,9 +29,6 @@
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
     "noEmit": true
   }
 }

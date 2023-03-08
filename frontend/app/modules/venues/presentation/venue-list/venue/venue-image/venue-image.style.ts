@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { SImage } from "~/components/atoms/image/image.style";
-
+import { SImage } from "../../../../../../components/atoms/image/image.style";
 import type { VenueImageProps } from "./venue-image";
 
 export const SVenueImage = styled(SImage)<VenueImageProps>`

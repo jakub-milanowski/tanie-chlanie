@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SImage } from "~/components/atoms/image/image.style";
+import { SImage } from "./image.style";
 
 export type ImageProps = React.ComponentPropsWithoutRef<"img">;
 

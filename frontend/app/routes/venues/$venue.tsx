@@ -3,10 +3,10 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/server-runtime/dist/routeModules";
 
-import { HttpStatusCode } from "~/domain/models/axios.type";
-import type { TVenueDetail } from "~/domain/models/dao/venue-detail.type";
-import { VenuesApi } from "~/domain/use-cases";
-import VenueModule from "~/modules/venue/presentation/venue-module";
+import { HttpStatusCode } from "../../domain/models/axios.type";
+import type { TVenueDetail } from "../../domain/models/dao/venue-detail.type";
+import { VenuesApi } from "../../domain/use-cases";
+import VenueModule from "../../modules/venue/presentation/venue-module";
 
 export const loader: LoaderFunction = async ({
   params

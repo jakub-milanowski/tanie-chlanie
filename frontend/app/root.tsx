@@ -3,8 +3,8 @@ import { ThemeProvider } from "styled-components";
 import type { MetaFunction } from "@remix-run/node";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
-import { theme } from "~/styles/global.style";
-import { Body, Container, GlobalStyle } from "~/styles/root.style";
+import { theme } from "./styles/global.style";
+import { Body, Container, GlobalStyle } from "./styles/root.style";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",

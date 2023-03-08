@@ -1,6 +1,5 @@
-import type { TVenue } from "~/domain/models/dao/venues.type";
-import Venue from "~/modules/venues/presentation/venue-list/venue/venue";
-
+import type { TVenue } from "../../../../domain/models/dao/venues.type";
+import Venue from "./venue/venue";
 import { SVenueList } from "./venue-list.style";
 
 interface VenueListProps {

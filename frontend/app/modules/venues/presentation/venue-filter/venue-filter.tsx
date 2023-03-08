@@ -1,4 +1,4 @@
-import Box from "~/components/atoms/box/box";
+import Box from "../../../../components/atoms/box/box";
 
 const VenueFilter = (): JSX.Element => {
   return (

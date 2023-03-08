@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SBox } from "~/components/atoms/box/box.style";
+import { SBox } from "./box.style";
 
 export interface BoxProps extends React.ComponentPropsWithoutRef<"div"> {
   direction?: "column" | "row";
