@@ -9,11 +9,7 @@ export interface RowProps extends Omit<BoxProps, "direction"> {
 const Row = (props: RowProps): JSX.Element => {
   const { children, ...rest } = props;
 
-  return (
-    <SRow {...rest} direction="row">
-      {children}
-    </SRow>
-  );
+  return <SRow {...rest}>{children}</SRow>;
 };
 
 export default Row;

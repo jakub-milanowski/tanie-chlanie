@@ -5,12 +5,13 @@ import Column from "../../../../../components/atoms/column/column";
 import Row from "../../../../../components/atoms/row/row";
 import type { TVenue } from "../../../../../domain/models/dao/venues.type";
 import VenueImage from "./venue-image/venue-image";
+import { FC } from "react";
 
 interface VenueProps {
   venue: TVenue;
 }
 
-const Venue = (props: VenueProps): JSX.Element => {
+const Venue: FC<VenueProps> = (props) => {
   const { venue } = props;
 
   return (

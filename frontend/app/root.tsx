@@ -4,7 +4,8 @@ import type { MetaFunction } from "@remix-run/node";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
 import { theme } from "./styles/global.style";
-import { Body, Container, GlobalStyle } from "./styles/root.style";
+import { Body, GlobalStyle } from "./styles/root.style";
+import NavBar from "./modules/root/presentation/nav-bar/nav-bar";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -22,9 +23,8 @@ const App = (): JSX.Element => {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Body>
-          <Container>
-            <Outlet />
-          </Container>
+          <NavBar />
+          <Outlet />
           <ScrollRestoration />
           <Scripts />
           {/* <LiveReload /> */}

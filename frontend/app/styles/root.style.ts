@@ -25,7 +25,8 @@ export const Body = styled.body`
   font-size: 16px;
   background-color: ${theme.white};
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const Container = styled.div`

@@ -5,6 +5,7 @@ import type { LoaderFunction } from "@remix-run/server-runtime/dist/routeModules
 
 import type { TVenue } from "../../domain/models/dao/venues.type";
 import { VenuesApi } from "../../domain/use-cases";
+import { Container } from "../../styles/root.style";
 import VenuesModule from "../../modules/venues/presentation/venues-module";
 
 export const loader: LoaderFunction = async (): Promise<TypedResponse<TVenue[]>> => {
@@ -14,7 +15,11 @@ export const loader: LoaderFunction = async (): Promise<TypedResponse<TVenue[]>>
 
 const Venues = (): JSX.Element => {
   const pageData: TVenue[] = useLoaderData<TVenue[]>();
-  return <VenuesModule venues={pageData} />;
+  return (
+    <Container>
+      <VenuesModule venues={pageData} />
+    </Container>
+  );
 };
 
 export default Venues;

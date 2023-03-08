@@ -2,12 +2,13 @@ import Row from "../../../components/atoms/row/row";
 import type { TVenue } from "../../../domain/models/dao/venues.type";
 import VenueFilter from "./venue-filter/venue-filter";
 import VenueList from "./venue-list/venue-list";
+import { FC } from "react";
 
 interface VenuesModuleProps {
   venues: TVenue[];
 }
 
-const VenuesModule = (props: VenuesModuleProps): JSX.Element => {
+const VenuesModule: FC<VenuesModuleProps> = (props) => {
   const { venues } = props;
 
   return (

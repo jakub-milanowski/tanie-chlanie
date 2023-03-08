@@ -1,16 +1,12 @@
-import type { TypedResponse } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import type { LoaderFunction } from "@remix-run/server-runtime/dist/routeModules";
-
 import RootModule from "../modules/root/presentation/root-module";
-
-export const loader: LoaderFunction = (): TypedResponse<unknown> => {
-  // Załadować Miasta
-  return json<unknown>({});
-};
+import { Container } from "../styles/root.style";
 
 const Root = (): JSX.Element => {
-  return <RootModule />;
+  return (
+    <Container>
+      <RootModule />
+    </Container>
+  );
 };
 
 export default Root;

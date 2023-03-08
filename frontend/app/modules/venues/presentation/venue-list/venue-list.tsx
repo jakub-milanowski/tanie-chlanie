@@ -1,12 +1,13 @@
 import type { TVenue } from "../../../../domain/models/dao/venues.type";
 import Venue from "./venue/venue";
 import { SVenueList } from "./venue-list.style";
+import { FC } from "react";
 
 interface VenueListProps {
   venues: TVenue[];
 }
 
-const VenueList = (props: VenueListProps): JSX.Element => {
+const VenueList: FC<VenueListProps> = (props) => {
   const { venues } = props;
 
   return (
