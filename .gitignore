@@ -9,3 +9,37 @@ frontend/public/build
 frontend/package-lock.json
 backend/*/migrations
 .vscode
+
+# dependencies
+frontend/node_modules
+frontend/*.pnp
+frontend/*.pnp.js
+
+# testing
+/coverage
+
+# next.js
+frontend/.next/
+frontend/out/
+
+# production
+frontend/build
+
+# misc
+*.pem
+
+# debug
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/*.pnpm-debug.log*
+
+# local env files
+frontend/*.env*.local
+
+# vercel
+frontend/*.vercel
+
+# typescript
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts

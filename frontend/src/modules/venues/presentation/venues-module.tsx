@@ -1,3 +1,5 @@
+"use client";
+
 import Row from "../../../components/atoms/row/row";
 import type { TVenue } from "../../../domain/models/dao/venues.type";
 import VenueFilter from "./venue-filter/venue-filter";

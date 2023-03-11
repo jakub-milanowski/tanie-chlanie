@@ -1,4 +1,4 @@
-import { GlobalStyle } from "../app/styles/root.style";
+import { GlobalStyle } from "../src/styles/root.style";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

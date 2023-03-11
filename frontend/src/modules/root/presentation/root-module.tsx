@@ -1,10 +1,10 @@
-import { Link } from "@remix-run/react";
+import Link from "next/link";
 
 const RootModule = (): JSX.Element => {
   return (
     <div>
       <div>Root module - select cit wrey</div>
-      <Link to="venues">Lokale</Link>
+      <Link href="venues">Lokale</Link>
     </div>
   );
 };

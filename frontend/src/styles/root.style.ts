@@ -1,3 +1,5 @@
+"use client";
+
 import styled, { createGlobalStyle } from "styled-components";
 
 import { theme } from "./global.style";

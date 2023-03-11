@@ -8,9 +8,12 @@ ENV CHOKIDAR_USEPOLLING=true
 WORKDIR /code
 
 COPY /public ./public
-COPY /app ./app
+COPY /src ./src
 
-ADD package.json remix.config.js remix.env.d.ts tsconfig.json ./
+ADD package.json ./
+ADD tsconfig.json ./
+ADD next.config.js ./
+ADD next-env.d.ts ./
 
 RUN npm install
 

@@ -23,4 +23,4 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend/app:/code/app
+      - ./frontend/src:/code/src

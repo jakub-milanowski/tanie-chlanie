@@ -20,8 +20,8 @@ następujące założenia w "clean architecture"
 struktura folderów
 
 ```bash
-|-- app
-    |-- routers
+|-- src
+    |-- app
         |-- page
     |-- components
         |-- atoms

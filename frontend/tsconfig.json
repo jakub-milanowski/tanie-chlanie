@@ -1,14 +1,14 @@
 {
-  "include": ["remix.env.d.ts", "./**/*.ts", "./**/*.tsx"],
-  "exclude": ["app/entry.server.tsx", "app/entry.client.tsx"],
+  "include": ["../frontend/next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "isolatedModules": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "target": "ESNext",
+    "target": "es5",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
@@ -21,7 +21,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "allowJs": false,
+    "allowJs": true,
     "noImplicitReturns": true,
     "strictPropertyInitialization": false,
     "incremental": true,
@@ -29,6 +29,11 @@
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "noEmit": true
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }

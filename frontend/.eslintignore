@@ -1,2 +1,2 @@
-app/entry.client.tsx
-app/entry.server.tsx
+src/entry.client.tsx
+src/entry.server.tsx

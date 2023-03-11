@@ -1,8 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: [
-    "@remix-run/eslint-config",
-    "@remix-run/eslint-config/node",
     "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -10,7 +8,8 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:react/recommended",
     "eslint:recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "next/core-web-vitals"
   ],
   plugins: ["react", "@typescript-eslint", "import", "simple-import-sort"],
   globals: {
