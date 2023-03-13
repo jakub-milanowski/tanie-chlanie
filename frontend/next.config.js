@@ -3,14 +3,18 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
-    styledComponents: {
-      ssr: true,
-      cssProp: true
-    },
+    styledComponents: true,
     ssr: true
   },
   experimental: {
     appDir: true
+  },
+  webpackDevMiddleware: (config) => {
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300
+    };
+    return config;
   }
 };
 

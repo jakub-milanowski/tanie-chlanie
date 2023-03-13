@@ -1,5 +1,3 @@
-("");
-
 import type { TVenueDetail } from "../../../domain/models/dao/venue-detail.type";
 
 interface VenueModuleProps {

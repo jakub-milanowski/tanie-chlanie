@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager, ThemeProvider } from "styled-components";
 import { theme } from "../styles/global.style";
@@ -14,22 +14,24 @@ const StyledComponentsRegistry = (props: StyledComponentsRegistryProps): JSX.Ele
   const { children } = props;
   // Only create stylesheet once with lazy initial state
   // x-ref: https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
-  const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
+  const styledComponentsStyleSheet = new ServerStyleSheet();
+  styledComponentsStyleSheet.collectStyles(<>{children}</>);
 
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
-    // @ts-ignore
     styledComponentsStyleSheet.instance.clearTag();
-    return <>{styles}</>;
+    return <React.Suspense fallback={<div>dupa2</div>}>{styles}</React.Suspense>;
   });
 
-  if (typeof window !== "undefined") return <>{children}</>;
+  if (typeof window !== "undefined") return <></>;
+
+  console.log("2", styledComponentsStyleSheet.instance);
 
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {children}
+        <React.Suspense fallback={<div>dupa</div>}>{children}</React.Suspense>
       </ThemeProvider>
     </StyleSheetManager>
   );
